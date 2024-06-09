@@ -14,6 +14,7 @@
       <root url="jar://$PROJECT_DIR$/src/libs/hibernate-commons-annotations-5.0.1.Final.jar!/" />
       <root url="jar://$PROJECT_DIR$/src/libs/dom4j-1.6.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/src/libs/antlr-2.7.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/javax.persistence-api-2.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <NATIVE>
