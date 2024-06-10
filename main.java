@@ -1,4 +1,4 @@
-package main.java.ecom.services;
+package main.java.ecom.database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -35,7 +35,7 @@ public class main {
     }
 
     //Insertar datos a la tabla vendedor
-    public static void insertVendedor(Connection con, String nombre_vendedor, String apellido_vendedor, int contraseña, int identificacion_vendedor, int numero_celular){
+    public static void insertVendedor(Connection con, int usuario, String nombre_vendedor, String apellido_vendedor, int contraseña, int identificacion_vendedor, int numero_celular){
         String sql = "Insert Into vendedor(nombre_vendedor,apellido_vendedor,identificacion_vendedor,contraseña,numero_celular) values('"+nombre_vendedor+"','"+apellido_vendedor+"','"+identificacion_vendedor+"','"+contraseña+"','"+numero_celular+"')";
         Statement stmt;
         int result;
@@ -83,13 +83,13 @@ public class main {
         }
 
     }
-//Conecxion con la base de datos.
+    //Conecxion con la base de datos.
     public static Connection ConectarBD(){
         Connection conexion;
         String host = "jdbc:mysql://localhost/";
         String user = "root";
         String pass = "";
-        String bd = "mydb";
+        String bd = "mydbecom";
 
         System.out.println("Conectando");
 
@@ -103,11 +103,10 @@ public class main {
         return conexion;
     }
     public static void main(String[] args) {
-        Connection bd = ConectarBD();
-        deleteVendedor(bd, 1);
-        Consulta(bd);
-       // insertVendedor(bd, "Manuel", "Ortiz", 14303, 1077865374, 311822);
-
+        //Connection bd = ConectarBD();
+        //deleteVendedor(bd, );
+        //Consulta(bd);
+        //insertVendedor(bd, 1, "Manuel", "Ortiz", 14303, 1077865374, 311822);
     }
 
 }
